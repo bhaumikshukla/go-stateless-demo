@@ -38,7 +38,7 @@ func main() {
 	})
 
 	// give response when at /
-	app.Post("/encrypt", func(c *fiber.Ctx) error {
+	app.Post("*encrypt", func(c *fiber.Ctx) error {
 
 		p := new(Sample)
 
@@ -68,7 +68,7 @@ func main() {
 	})
 
 	// give response when at /
-	app.Post("/decrypt", func(c *fiber.Ctx) error {
+	app.Post("*decrypt", func(c *fiber.Ctx) error {
 
 		p := new(SampleEncrypted)
 
